@@ -17,7 +17,6 @@ import { FooterComponent } from './common/footer/footer.component';
 import { HomeComponent } from './common/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ServicesComponent } from './pages/services/services.component';
 import { TeamComponent } from './pages/team/team.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
@@ -26,6 +25,8 @@ import { ProductComponent } from './pages/product/product.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ConsultantComponent } from './pages/consultant/consultant.component';
+// Service subpage
+import { ServicesComponent } from './pages/services/services.component';
 import { ItconsultantComponent } from './pages/services/itconsultant/itconsultant.component';
 import { AutomationComponent } from './pages/services/automation/automation.component';
 import { SoftwaredevComponent } from './pages/services/softwaredev/softwaredev.component';
@@ -41,11 +42,28 @@ import { NetworkingComponent } from './pages/services/networking/networking.comp
 import { SecurityComponent } from './pages/services/security/security.component';
 import { ServicehomeComponent } from './pages/services/servicehome/servicehome.component';
 
+
+
 const appRoutes: Routes = [
   { path: 'home',         component: HomeComponent },
   { path: 'about',        component: AboutComponent },
   { path: 'contact',        component: ContactComponent },
-  { path: 'services',        component: ServicesComponent },
+  //Services
+  { path: 'services', component: ServicesComponent},
+  { path: 'itconsultant', component: ItconsultantComponent },
+  { path: 'automation', component: AutomationComponent },
+  { path: 'softwaredev', component: SoftwaredevComponent },
+  { path: 'dataanalysis', component: DataanalysisComponent },
+  { path: 'webportal', component: WebportalComponent },
+  { path: 'ecommerce', component: EcommerceComponent },
+  { path: 'outsource', component: OutsourceComponent },
+  { path: 'mobileapp', component: MobileappComponent },
+  { path: 'webapp', component: WebappComponent },
+  { path: 'qa', component: QaComponent },
+  { path: 'image', component: ImageComponent },
+  { path: 'networking', component: NetworkingComponent },
+  { path: 'security', component: SecurityComponent },
+
   { path: 'emp',        component: TeamComponent },
   { path: 'testimonial',        component: TestimonialComponent },
   { path: 'faq',        component: FaqComponent },
@@ -67,7 +85,6 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ServicesComponent,
     TeamComponent,
     PageNotFoundComponent,
     TestimonialComponent,
@@ -75,6 +92,7 @@ const appRoutes: Routes = [
     ProductComponent,
     NewsComponent,
     ConsultantComponent,
+    ServicesComponent,
     PortfolioComponent,
     ItconsultantComponent,
     AutomationComponent,
