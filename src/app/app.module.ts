@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
@@ -42,7 +41,8 @@ import { NetworkingComponent } from './pages/services/networking/networking.comp
 import { SecurityComponent } from './pages/services/security/security.component';
 import { ServicehomeComponent } from './pages/services/servicehome/servicehome.component';
 
-
+import { AgmCoreModule } from '@agm/core';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 const appRoutes: Routes = [
   { path: 'home',         component: HomeComponent },
@@ -116,8 +116,12 @@ const appRoutes: Routes = [
     ),
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(environment.firebase),  // Add this
-    AngularFirestoreModule                            // And this
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAlGu7E-wW0FMhPxwYajU8FseFkM8TGlLE'
+    }),
+    AgmSnazzyInfoWindowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

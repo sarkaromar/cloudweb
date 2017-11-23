@@ -1724,7 +1724,7 @@ form label.error {
 }
 
 .contact-list li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding-bottom: 0
 }
 
@@ -2745,7 +2745,7 @@ form label.error {
     position: relative;
     width: 100%;
     padding: 0;
-    min-height: 250px
+    /* min-height: 250px */
 }
 
 .banner-static:not(.has-bg-image):not([class*="bg-"]) {
@@ -6734,4 +6734,20 @@ a:hover>.feature.boxed {
     .page-typo .col-md-3.col-sm-6.col-xs-6 {
         width: 100%
     }
+}
+
+ul.social-iocn{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.social-iocn li{
+    list-style: none;
+    float: left;
+}
+ul.social-iocn li a{
+    display: inline-block;
+    padding: 5px;
+    font-size: 32px;
+    color: #24C9ED;
 }
