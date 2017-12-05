@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Router, NavigationEnd } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   //posts: Observable<Post[]>;
   posts: any;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, private router: Router) {
 
   }
 
@@ -45,6 +45,14 @@ export class AppComponent implements OnInit {
         return { id, data };
       });
     });
+    // router link scroll top
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
+
   }
   addPost() {
     this.afs.collection('posts').add({'title': this.title, 'content': this.content, 'date': this.date});
