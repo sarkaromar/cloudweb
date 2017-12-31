@@ -1,0 +1,16 @@
+ul.main-services li {
+    border: 1px solid #40d2f3;
+    border-radius: 15px 0 15px 0;
+    margin-bottom: 25px;
+    padding: 15px;
+    width: 360px;
+    float: left;
+    margin: 10px;
+    height: 170px;
+    overflow: hidden;
+}
+ul.main-services li h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
